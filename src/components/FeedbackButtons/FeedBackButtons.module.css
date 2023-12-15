@@ -1,0 +1,36 @@
+.feedBackBtnsBox {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.225);
+}
+
+.feedbackBtnsTitle {
+  margin-bottom: 15px;
+}
+.feedbackBtnsList {
+  display: flex;
+  gap: 15px;
+  font-size: 18px;
+}
+.feedbackBtnsItem {
+  display: block;
+}
+
+.feedbackBtn {
+  background-color: rgb(9, 1, 47);
+  color: aliceblue;
+  font-size: 18px;
+  border-radius: 18px;
+  padding: 10px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  min-width: 100px;
+  transition: all 250ms ease-in-out;
+}
+
+.feedbackBtn:is(:hover, :focus) {
+  background-color: rgba(19, 95, 216, 0.975);
+}
+
+/* cn  бібліотека? */
