@@ -56,7 +56,10 @@ class App extends Component {
             display: 'flex',
             flexDirection: 'column',
             gap: 30,
-            border: '1px solid rgba(128, 128, 128, 0.225)',
+            // border: '1px solid rgba(128, 128, 128, 0.225)',`
+            borderRadius: 20,
+            boxShadow:
+              'rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px',
           }}
         >
           <Section title="Please leave feedback">

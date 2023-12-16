@@ -13,10 +13,6 @@ code {
     monospace;
 }
 
-li {
-  list-style-type: none;
-}
-
 ul,
 ol {
   margin-top: 0;
