@@ -1,0 +1,11 @@
+.statisticsTitle {
+  font-weight: 500;
+}
+
+.statisticsList {
+  font-size: 18px;
+}
+
+.statisticsItem {
+  padding: 10px 0;
+}

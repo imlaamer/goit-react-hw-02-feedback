@@ -1,5 +1,5 @@
-import FeedbackButtons from 'components/FeedbackButtons';
-import Statistics from 'components/Statistics';
+import Feedback from 'components/Feedback';
+import Statistics from 'components/Feedback/Statistics';
 // import FeedbackButtons from "./FeedbackButtons/FeedbackButtons";
 
 export const App = () => {
@@ -14,8 +14,7 @@ export const App = () => {
         color: '#010101',
       }}
     >
-      <FeedbackButtons></FeedbackButtons>
-      <Statistics></Statistics>
+      <Feedback></Feedback>
     </div>
   );
 };
