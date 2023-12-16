@@ -5,6 +5,7 @@
 .feedbackBtnsList {
   display: flex;
   gap: 15px;
+  font-size: 16px;
 }
 .feedbackBtnsItem {
   display: block;
