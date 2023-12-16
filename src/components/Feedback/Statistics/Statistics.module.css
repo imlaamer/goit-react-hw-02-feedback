@@ -1,5 +1,6 @@
 .statisticsTitle {
   font-weight: 500;
+  margin-bottom: 25px;
 }
 
 .statisticsList {
@@ -7,5 +8,5 @@
 }
 
 .statisticsItem {
-  padding: 10px 0;
+  padding: 5px 0;
 }
