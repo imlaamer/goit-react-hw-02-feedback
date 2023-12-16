@@ -30,9 +30,7 @@ class App extends Component {
   countPositiveFeedbackPercentage = () => {
     this.setState(prevState => {
       return {
-        positiveFeedbacks: Math.ceil(
-          ((prevState.good + prevState.neutral) * 100) / prevState.total
-        ),
+        positiveFeedbacks: Math.ceil((prevState.good * 100) / prevState.total),
       };
     });
   };
