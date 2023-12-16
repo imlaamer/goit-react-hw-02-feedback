@@ -1,31 +1,20 @@
-/* .feedBackBtnsBox{
-  mb
-
-} */
-
-.feedbackBtnsTitle {
-  margin-bottom: 30px;
-  font-weight: 500;
-}
 .feedbackBtnsList {
   display: flex;
   gap: 15px;
   font-size: 16px;
 }
+
 .feedbackBtnsItem {
   display: block;
 }
 
 .feedbackBtn {
+  padding: 6px;
+  min-width: 90px;
   background-color: rgb(9, 1, 47);
   color: aliceblue;
   font-size: 16px;
   border-radius: 18px;
-  padding: 6px;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  min-width: 90px;
   cursor: pointer;
   transition: background-color 300ms ease-in-out, box-shadow 200ms ease-in-out,
     transform 200ms ease-in-out;
@@ -36,5 +25,3 @@
   transform: scale(1.1);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
-
-/* cn  бібліотека? */

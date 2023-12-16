@@ -1,17 +1,9 @@
-// import React, { Component } from 'react';
 import css from './Statistics.module.css';
 
 function Statistics({ good, neutral, bad, total, positiveFeedbacks }) {
-  const {
-    statisticsBox,
-    statisticsTitle,
-    statisticsList,
-    statisticsItem,
-    statisticsText,
-  } = css;
+  const { statisticsBox, statisticsList, statisticsItem, statisticsText } = css;
   return (
     <div className={statisticsBox}>
-      <p className={statisticsTitle}>Statistics</p>
       <ul className={statisticsList}>
         <li className={statisticsItem}>
           <p className={statisticsText}>Good: {good}</p>
