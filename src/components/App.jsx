@@ -5,35 +5,45 @@ import Statistics from 'components/Statistics';
 import Notification from 'components/Notification';
 
 class App extends Component {
-  options = ['good', 'neutral', 'bad'];
-
   state = {
     good: 0,
     neutral: 0,
     bad: 0,
-    total: 0,
-    positiveFeedbacks: 0,
+    // total: 0,
+    // positiveFeedbacks: 0,
   };
 
+  options = Object.keys(this.state);
+
   onLeaveFeedback = option => {
-    this.setState({ [option]: this.state[option] + 1 });
+    this.setState(prevState => {
+      return { [option]: prevState[option] + 1 };
+    });
     this.countTotalFeedback();
     this.countPositiveFeedbackPercentage();
   };
 
   countTotalFeedback = () => {
-    this.setState(prevState => {
-      return { total: prevState.good + prevState.neutral + prevState.bad };
-    });
+    return this.state.good + this.state.neutral + this.state.bad;
   };
 
   countPositiveFeedbackPercentage = () => {
-    this.setState(prevState => {
-      return {
-        positiveFeedbacks: Math.ceil((prevState.good * 100) / prevState.total),
-      };
-    });
+    return Math.ceil((this.state.good * 100) / this.countTotalFeedback());
   };
+
+  // countTotalFeedback = () => {
+  //   this.setState(prevState => {
+  //     return { total: prevState.good + prevState.neutral + prevState.bad };
+  //   });
+  // };
+
+  // countPositiveFeedbackPercentage = () => {
+  //   this.setState(prevState => {
+  //     return {
+  //       positiveFeedbacks: Math.ceil((prevState.good * 100) / prevState.total),
+  //     };
+  //   });
+  // };
 
   render() {
     return (
@@ -54,7 +64,6 @@ class App extends Component {
             display: 'flex',
             flexDirection: 'column',
             gap: 30,
-            // border: '1px solid rgba(128, 128, 128, 0.225)',`
             borderRadius: 20,
             boxShadow:
               'rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px',
@@ -69,7 +78,11 @@ class App extends Component {
 
           <Section title="Statistics">
             {this.options.some(option => this.state[option] !== 0) ? (
-              <Statistics {...this.state}></Statistics>
+              <Statistics
+                {...this.state}
+                total={this.countTotalFeedback()}
+                positiveFeedbacks={this.countPositiveFeedbackPercentage()}
+              ></Statistics>
             ) : (
               <Notification message="There is no feedback"></Notification>
             )}

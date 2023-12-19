@@ -2,6 +2,8 @@ import css from './Statistics.module.css';
 
 function Statistics({ good, neutral, bad, total, positiveFeedbacks }) {
   const { statisticsBox, statisticsList, statisticsItem, statisticsText } = css;
+
+  //map?
   return (
     <div className={statisticsBox}>
       <ul className={statisticsList}>
